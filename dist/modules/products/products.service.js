@@ -32,5 +32,9 @@ const deleteSingleProductFromDB = (id) => __awaiter(void 0, void 0, void 0, func
     return result;
 });
 exports.productServices = {
-    createProductIntoDB, getAllProductsFromDB, deleteSingleProductFromDB, getSingleProductFromDB, updateSingleProductFromDB
+    createProductIntoDB,
+    getAllProductsFromDB,
+    deleteSingleProductFromDB,
+    getSingleProductFromDB,
+    updateSingleProductFromDB,
 };

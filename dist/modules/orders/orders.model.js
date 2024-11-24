@@ -36,7 +36,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Order = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 const OrderSchema = new mongoose_1.Schema({
-    email: { type: String, required: true,
+    email: {
+        type: String,
+        required: true,
         validate: {
             validator: function (value) {
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
@@ -44,10 +46,14 @@ const OrderSchema = new mongoose_1.Schema({
             message: (props) => `Invalid email: ${props.value}`,
         },
     },
-    product: { type: mongoose_1.default.Schema.Types.ObjectId, ref: "Product", required: true },
+    product: {
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: 'Product',
+        required: true,
+    },
     quantity: { type: Number, required: true, min: 1 },
     totalPrice: { type: Number, required: true },
 }, {
     timestamps: true,
 });
-exports.Order = mongoose_1.default.model("Order", OrderSchema);
+exports.Order = mongoose_1.default.model('Order', OrderSchema);

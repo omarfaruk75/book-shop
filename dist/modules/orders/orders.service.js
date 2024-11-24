@@ -26,7 +26,7 @@ const getRevenueByOrderFromDB = () => __awaiter(void 0, void 0, void 0, function
             {
                 $group: {
                     _id: null,
-                    totalRevenue: { $sum: "$totalPrice" },
+                    totalRevenue: { $sum: '$totalPrice' },
                 },
             },
             {

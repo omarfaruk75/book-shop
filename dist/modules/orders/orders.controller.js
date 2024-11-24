@@ -16,16 +16,16 @@ const createOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         const { data: orderData } = req.body;
         const result = yield orders_service_1.orderServices.createOrderIntoDB(orderData);
         res.status(200).json({
-            message: "Book created successfully",
+            message: 'Book created successfully',
             success: true,
-            data: result
+            data: result,
         });
     }
     catch (error) {
         res.json({
             status: false,
             message: 'Something went wrong',
-            error
+            error,
         });
     }
 });
@@ -33,16 +33,16 @@ const getAllOrders = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     try {
         const result = yield orders_service_1.orderServices.getAllOrdersFromDB();
         res.status(200).json({
-            message: "Book retrieved successfully",
+            message: 'Book retrieved successfully',
             success: true,
-            data: result
+            data: result,
         });
     }
     catch (error) {
         res.status(404).json({
             success: false,
             message: 'Something went wrong',
-            error
+            error,
         });
     }
 });
@@ -50,19 +50,21 @@ const calculateRevenue = (req, res) => __awaiter(void 0, void 0, void 0, functio
     try {
         const totalRevenue = yield orders_service_1.orderServices.getRevenueByOrderFromDB();
         res.status(200).json({
-            message: "Revenue calculated successfully",
+            message: 'Revenue calculated successfully',
             success: true,
             data: { totalRevenue },
         });
     }
     catch (error) {
         res.status(404).json({
-            message: "Failed to calculate revenue",
+            message: 'Failed to calculate revenue',
             success: false,
-            error
+            error,
         });
     }
 });
 exports.orderControllers = {
-    createOrder, getAllOrders, calculateRevenue
+    createOrder,
+    getAllOrders,
+    calculateRevenue,
 };

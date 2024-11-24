@@ -5,18 +5,20 @@ const mongoose_1 = require("mongoose");
 exports.productSchema = new mongoose_1.Schema({
     author: { type: String, required: true },
     title: { type: String, required: true, unique: true },
-    price: { type: Number, required: [true, "{VALUE} must be a positive number"],
+    price: {
+        type: Number,
+        required: [true, '{VALUE} must be a positive number'],
         validate: {
             validator: function (value) {
                 return value > 0;
             },
-            message: "Price must be a positive number",
+            message: 'Price must be a positive number',
         },
     },
     category: {
         type: String,
         enum: ['Fiction', 'Science', 'SelfDevelopment', 'Poetry', 'Religious'],
-        required: true
+        required: true,
     },
     description: { type: String, required: true },
     quantity: { type: Number, required: true },

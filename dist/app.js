@@ -19,7 +19,7 @@ app.use('/api/orders/orderId', orders_routes_1.orderRoutes);
 app.get('/', (req, res) => {
     res.send({
         status: true,
-        message: "Server is Live"
+        message: 'Server is Live',
     });
 });
 exports.default = app;

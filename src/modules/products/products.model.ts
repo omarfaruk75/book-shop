@@ -4,7 +4,7 @@ import { IProduct } from './products.interface';
 export const productSchema = new Schema<IProduct>(
   {
     author: { type: String, required: true },
-    title: { type: String, required: true, unique: true },
+    title: { type: String, required: true },
     price: {
       type: Number,
       required: [true, '{VALUE} must be a positive number'],

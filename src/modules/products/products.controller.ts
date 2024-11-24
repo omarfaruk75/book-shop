@@ -3,8 +3,8 @@ import { productServices } from './products.service';
 
 const createProduct = async (req: Request, res: Response) => {
   try {
-    const { data: productData } = req.body;
-    const result = await productServices.createProductIntoDB(productData);
+    const body = req.body;
+    const result = await productServices.createProductIntoDB(body);
     res.status(200).json({
       message: 'Book created successfully',
       success: true,
