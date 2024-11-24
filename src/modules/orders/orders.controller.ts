@@ -3,8 +3,8 @@ import { orderServices } from './orders.service';
 
 const createOrder = async (req: Request, res: Response) => {
   try {
-    const { data: orderData } = req.body;
-    const result = await orderServices.createOrderIntoDB(orderData);
+    const data = req.body;
+    const result = await orderServices.createOrderIntoDB(data);
     res.status(200).json({
       message: 'Book created successfully',
       success: true,
