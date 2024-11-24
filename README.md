@@ -47,7 +47,7 @@ Welcome to **Book Shop**, an online platform for buying and selling books seamle
 - **tsc -init** to open tsconfig.json file for typescript configure rootDir and outDir
 - **npm i --save-dev @gype/express** for import express to remove error
 - **npm i -D eslint@9.14.0 @eslint/js @types/eslint__js typescript typescript-eslint** for adding eslint
-- **npx eslint --init**version of eslint: "^9.14.0" has been changed to eslint: "^9.15.0" by install the following two steps
+- **npx eslint --init** version of eslint: "^9.14.0" has been changed to eslint: "^9.15.0" by install the following two steps
 - **npm remove eslint**
 - **npm i -D eslint@9.14.0**
   
@@ -75,10 +75,8 @@ Welcome to **Book Shop**, an online platform for buying and selling books seamle
     {
   "semi": true,
   "singleQuote": true
-}
- ```
-```
-`  **in**  **.prettierignore**  dist is added
+    }
+**in**  **.prettierignore**  dist is added
 #### Finally
 
 in  **package.json** the following data are added 
